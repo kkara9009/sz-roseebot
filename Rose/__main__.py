@@ -5,19 +5,19 @@ from contextlib import closing, suppress
 from uvloop import install
 from pyrogram import filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from Rose.menu import *
-from Rose import *
-from Rose.plugins import ALL_MODULES
-from Rose.utils import paginate_modules
+from ally.menu import *
+from ally import *
+from ally.plugins import ALL_MODULES
+from ally.utils import paginate_modules
 from lang import get_command
-from Rose.utils.lang import *
-from Rose.utils.commands import *
-from Rose.mongo.rulesdb import *
-from Rose.utils.start import *
-from Rose.mongo.usersdb import *
-from Rose.mongo.restart import *
-from Rose.mongo.chatsdb import *
-from Rose.plugins.fsub import ForceSub
+from ally.utils.lang import *
+from ally.utils.commands import *
+from ally.mongo.rulesdb import *
+from ally.utils.start import *
+from ally.mongo.usersdb import *
+from ally.mongo.restart import *
+from ally.mongo.chatsdb import *
+from ally.plugins.fsub import ForceSub
 import random
 
 loop = asyncio.get_event_loop()
@@ -29,7 +29,7 @@ HELPABLE = {}
 async def start_bot():
     global HELPABLE
     for module in ALL_MODULES:
-        imported_module = importlib.import_module("Rose.plugins." + module)
+        imported_module = importlib.import_module("ally.plugins." + module)
         if (
             hasattr(imported_module, "__MODULE__")
             and imported_module.__MODULE__
@@ -69,8 +69,8 @@ async def start_bot():
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @szteambots        | 
-|          Greetings from supun  :)           |
+|         (C) 2021-2022 by @Kkara9009        | 
+|          Greetings from karan  :)           |
 |_____________________________________________|  
                                                                                                
     """)
@@ -106,12 +106,12 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="🌐 My Website",
-                url=f"https://szrosebot.ml",
+                text="❤️ My group",
+                url=f"https://t.me/anu_pui",
             ),
             InlineKeyboardButton(
-                text="🔰News Channel",
-                url=f"https://t.me/szroseupdates",
+                text="🔰News group",
+                url=f"https://t.me/anu_pui",
             )
         ],
     ]
@@ -128,7 +128,7 @@ keyboard = InlineKeyboardMarkup(
     ]
 )
 
-IMG = ["https://telegra.ph/file/c8f5c1dd990ca9a3d8516.jpg",
+IMG = ["https://telegra.ph//file/d3c3cb9abf414726b3cd7.jpg",
        "https://telegra.ph/file/77cc3154b752ce822fd52.jpg",
        "https://telegra.ph/file/e72fb0b6a7fba177cf4c7.jpg",
        "https://telegra.ph/file/8738a478904238e367939.jpg",
@@ -182,7 +182,7 @@ async def start(client, message: Message, _):
         await message.reply(f"""
 [👋]({random.choice(IMG)}) Hey there {message.from_user.mention}, 
 
-   My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
+   My name is ally, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
 ⚒ Send Me /help For Get Commands. 
@@ -273,7 +273,7 @@ async def startcq(client,CallbackQuery, _):
             text=f"""
 👋 Hey there {CallbackQuery.from_user.mention}, 
 
-   My name is Rose ,an  advanced telegram Group management Bot For help 
+   My name is ally ,an  advanced telegram Group management Bot For help 
 You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
@@ -293,7 +293,8 @@ async def help_parser(name, keyboard=None):
 I'm a group management bot with some useful features.
 You can choose an option below, by clicking a button.
 If you have any bugs or questions on how to use me, 
-have a look at my [Docs](https://szkkara9009.gitbook.io/rose-bot/), or head to @szteambots.
+have a look at my
+ head to @Kkara9009.
 **All commands can be used with the following: / **""",
         keyboard,
     )
