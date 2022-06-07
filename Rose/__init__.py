@@ -12,7 +12,7 @@ from config import *
 import pymongo
 
 
-SUPPORT_GROUP = "https://t.me/slbotzone"
+SUPPORT_GROUP = "https://t.me/anu_pui"
 SUDOERS = SUDO_USERS_ID
 LOG_GROUP_ID = LOG_GROUP_ID
 MOD_LOAD = []
@@ -24,7 +24,7 @@ OWNER_ID = 1467358214
 
 
 myclient = pymongo.MongoClient(DB_URI)
-dbn = myclient["supun"]
+dbn = myclient["ally"]
 
 mongo_client = AsyncIOMotorClient(MONGO_URL)
 db = mongo_client.wbb
